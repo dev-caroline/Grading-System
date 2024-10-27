@@ -10,15 +10,16 @@
 </head>
 <body>
     <div class="background">
-        <div class="lol conatiner-fluid border border-3 col-lg-6 col-8 shadow rounded-bottom-5 d-flex justify-content-center py-5 my-5">
+        <div class="lol conatiner-fluid border border-3 col-lg-6 col-11 shadow rounded-bottom-5 d-flex justify-content-center py-5 my-5">
             <div class="border-bottom border-white mx-lg-3 mx-5">
                 <h1 class="text-white ms-5">GRADING SYSTEM <img src="images/logo-removebg-preview.png" width="150" alt=""></h1> <br><br>
                 <p class="text-white fst-italic">Enter your score</p>
-                <input type="number" placeholder="Enter your score" class="lip form-control w-100 rounded-3" id="score" > <br>
+                <input type="number" placeholder="Enter your score" class="lip form-control w-100 rounded-3" id="score"> <br>
                 <button class="btn btn-primary" onclick=" gradeChecker()" >Check</button><br><br>
                 <div class="result text-white fs-4 border-bottom">Result :</div> <br><br>
-                <div class="fs-2 text-white" id="showResult">Are you ready 😈😅</div>
-                <!-- <p id="Invalid" class="text-danger"></p> -->
+                <div class="fs-2 text-white" id="showResult">Are you ready 😈😅 <br><br>
+                    <!-- <p class="" id="remark">tyi</p> -->
+                </div>
             </div>
         </div>
     </div> 
@@ -41,7 +42,9 @@
                 var userScore = Number(score.value)
                 if (userScore >= 0 && userScore < 40) {
                     showResult.innerHTML = ''
-                    showResult.innerHTML = 'F' + ' - Fail😭'
+                    showResult.innerHTML = 'F' + ' - Fail😭' 
+                    // remark.innerHTML = ''
+                    // remark.innerHTML = 'you failed'
                     // songFail.play
                 }
                 else if (userScore >= 40 && userScore < 45) {
@@ -71,7 +74,7 @@
                 }
                 else{
                     showResult.innerHTML = ''
-                    showResult.innerHTML = 'Invalid !!'
+                    showResult.innerHTML = 'Invalid !!😡'
                     // invalid.play
                 }
             }
