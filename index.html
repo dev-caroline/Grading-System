@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="background">
+        <div class="lol conatiner-fluid border border-3 col-lg-6 col-8 shadow rounded-bottom-5 d-flex justify-content-center py-5 my-5">
+            <div class="border-bottom border-white">
+                <h1 class="text-white ms-5">GRADING SYSTEM <img src="images/logo-removebg-preview.png" width="150" alt=""></h1> <br><br>
+                <p class="text-white fst-italic">Enter your score</p>
+                <input type="number" placeholder="Enter your score" class="lip form-control w-100 rounded-3" id="score" > <br>
+                <button class="btn btn-primary" onclick=" gradeChecker()" >Check</button><br><br>
+                <div class="result text-white fs-4 border-bottom">Result :</div> <br><br>
+                <div class="fs-2 text-white" id="showResult">Are you ready 😈😅</div>
+                <!-- <p id="Invalid" class="text-danger"></p> -->
+            </div>
+        </div>
+    </div> 
+
+
+
+    <script>
+        function gradeChecker() {
+            // var songFail = Audio('')
+            // var songPass2 = Audio('')
+            // var songPass = Audio('')
+            // var songCredit2 = Audio('')
+            // var songCredit = Audio('')
+            // var songExcellent = Audio('')
+            // var invalid = Audio('')
+            if(score.value == ''){
+                alert('Enter your score')
+                // console.log(userScore);
+            }else{
+                var userScore = Number(score.value)
+                if (userScore >= 0 && userScore < 40) {
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'F' + ' - Fail😭'
+                    // songFail.play
+                }
+                else if (userScore >= 40 && userScore < 45) {
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'E' + '- Pass🥲'
+                    // songPass2.play
+                }
+                else if (userScore >= 45 && userScore < 50) {
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'D' + '- Pass😒'
+                    // songPass.play
+                }
+                else if (userScore >= 50 && userScore < 60) {
+                    showResult.innerHTML = '' 
+                    showResult.innerHTML = 'C' + '- Credit😐'
+                    // songCredit2.play
+                }
+                else if (userScore >= 60 && userScore < 70) {
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'B' + '- Credit🙂‍↔️'
+                    // songCredit.play
+                }
+                else if (userScore >= 70 && userScore <= 100) {
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'A' + '- Excellent😍🤩'
+                    // songExcellent.play
+                }
+                else{
+                    showResult.innerHTML = ''
+                    showResult.innerHTML = 'Invalid !!'
+                    // invalid.play
+                }
+            }
+        }
+    </script>
+</body>
+</html>

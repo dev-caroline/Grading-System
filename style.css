@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-color: cornflowerblue;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    /* padding: 100px; */
+    /* padding-top: 500px; */
+}
+.lol{
+    background-color: #222EA2;
+        /* padding-top: 4x00px; */
+    /* flex-wrap: wrap; */
+}
